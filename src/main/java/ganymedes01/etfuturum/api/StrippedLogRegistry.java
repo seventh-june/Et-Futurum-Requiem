@@ -117,6 +117,11 @@ public class StrippedLogRegistry {
 			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs4"), 3, ModBlocks.BOP_LOG_STRIPPED4.get(), 3);
 		}
 
+		if(ModBlocks.THAUMCRAFT_LOG_STRIPPED.isEnabled()) {
+			addLog(GameRegistry.findBlock("Thaumcraft", "blockMagicalLog"), 0, ModBlocks.THAUMCRAFT_LOG_STRIPPED.get(), 0);
+			addLog(GameRegistry.findBlock("Thaumcraft", "blockMagicalLog"), 1, ModBlocks.THAUMCRAFT_LOG_STRIPPED.get(), 1);
+		}
+
 		if(ModBlocks.BOP_WOOD.isEnabled() && ModBlocks.BOP_WOOD_STRIPPED.isEnabled()) {
 			addLog(ModBlocks.BOP_WOOD.get(), 0, ModBlocks.BOP_WOOD_STRIPPED.get(), 0);
 			addLog(ModBlocks.BOP_WOOD.get(), 1, ModBlocks.BOP_WOOD_STRIPPED.get(), 1);
@@ -143,6 +148,11 @@ public class StrippedLogRegistry {
 			addLog(ModBlocks.BOP_WOOD4.get(), 1, ModBlocks.BOP_WOOD_STRIPPED4.get(), 1);
 			addLog(ModBlocks.BOP_WOOD4.get(), 2, ModBlocks.BOP_WOOD_STRIPPED4.get(), 2);
 			addLog(ModBlocks.BOP_WOOD4.get(), 3, ModBlocks.BOP_WOOD_STRIPPED4.get(), 3);
+		}
+
+		if(ModBlocks.THAUMCRAFT_WOOD.isEnabled() && ModBlocks.THAUMCRAFT_WOOD_STRIPPED.isEnabled()) {
+			addLog(ModBlocks.THAUMCRAFT_WOOD.get(), 0, ModBlocks.THAUMCRAFT_WOOD_STRIPPED.get(), 0);
+			addLog(ModBlocks.THAUMCRAFT_WOOD.get(), 1, ModBlocks.THAUMCRAFT_WOOD_STRIPPED.get(), 1);
 		}
 
 		if (ModBlocks.BARK.isEnabled() && ModBlocks.WOOD_STRIPPED.isEnabled()) {

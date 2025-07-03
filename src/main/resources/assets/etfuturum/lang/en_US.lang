@@ -899,19 +899,6 @@ tile.etfuturum.bop_stripped_sacredoak_wood.name=Stripped Sacred Oak Wood
 item.etfuturum.bop_sacredoak_boat.name=Sacred Oak Boat
 item.etfuturum.bop_sacredoak_chest_boat.name=Sacred Oak Boat with Chest
 
-tile.etfuturum.bop_mahogany_fence.name=Mahogany Fence
-tile.etfuturum.bop_mahogany_button.name=Mahogany Button
-tile.etfuturum.bop_mahogany_pressure_plate.name=Mahogany Pressure Plate
-tile.etfuturum.bop_mahogany_fence_gate.name=Mahogany Pressure Plate
-tile.etfuturum.bop_mahogany_door.name=Mahogany Door
-tile.etfuturum.bop_mahogany_trapdoor.name=Mahogany Trapdoor
-tile.etfuturum.bop_mahogany_sign.name=Mahogany Sign
-tile.etfuturum.bop_stripped_mahogany_log.name=Stripped Mahogany Log
-tile.etfuturum.bop_mahogany_wood.name=Mahogany Wood
-tile.etfuturum.bop_stripped_mahogany_wood.name=Stripped Mahogany Wood
-item.etfuturum.bop_mahogany_boat.name=Mahogany Boat
-item.etfuturum.bop_mahogany_chest_boat.name=Mahogany Boat with Chest
-
 tile.etfuturum.bop_cherry_fence.name=Cherry Fence
 tile.etfuturum.bop_cherry_button.name=Cherry Button
 tile.etfuturum.bop_cherry_pressure_plate.name=Cherry Pressure Plate
@@ -1098,6 +1085,32 @@ tile.etfuturum.bop_mahogany_wood.name=Mahogany Wood
 tile.etfuturum.bop_stripped_mahogany_wood.name=Stripped Mahogany Wood
 item.etfuturum.bop_mahogany_boat.name=Mahogany Boat
 item.etfuturum.bop_mahogany_chest_boat.name=Mahogany Boat with Chest
+
+tile.etfuturum.thaumcraft_greatwood_fence.name=Greatwood Fence
+tile.etfuturum.thaumcraft_greatwood_button.name=Greatwood Button
+tile.etfuturum.thaumcraft_greatwood_pressure_plate.name=Greatwood Pressure Plate
+tile.etfuturum.thaumcraft_greatwood_fence_gate.name=Greatwood Pressure Plate
+tile.etfuturum.thaumcraft_greatwood_door.name=Greatwood Door
+tile.etfuturum.thaumcraft_greatwood_trapdoor.name=Greatwood Trapdoor
+tile.etfuturum.thaumcraft_greatwood_sign.name=Greatwood Sign
+tile.etfuturum.thaumcraft_stripped_greatwood_log.name=Stripped Greatwood Log
+tile.etfuturum.thaumcraft_greatwood_wood.name=Greatwood Wood
+tile.etfuturum.thaumcraft_stripped_greatwood_wood.name=Stripped Greatwood Wood
+item.etfuturum.thaumcraft_greatwood_boat.name=Greatwood Boat
+item.etfuturum.thaumcraft_greatwood_chest_boat.name=Greatwood Boat with Chest
+
+tile.etfuturum.thaumcraft_silverwood_fence.name=Silverwood Fence
+tile.etfuturum.thaumcraft_silverwood_button.name=Silverwood Button
+tile.etfuturum.thaumcraft_silverwood_pressure_plate.name=Silverwood Pressure Plate
+tile.etfuturum.thaumcraft_silverwood_fence_gate.name=Silverwood Pressure Plate
+tile.etfuturum.thaumcraft_silverwood_door.name=Silverwood Door
+tile.etfuturum.thaumcraft_silverwood_trapdoor.name=Silverwood Trapdoor
+tile.etfuturum.thaumcraft_silverwood_sign.name=Silverwood Sign
+tile.etfuturum.thaumcraft_stripped_silverwood_log.name=Stripped Silverwood Log
+tile.etfuturum.thaumcraft_silverwood_wood.name=Silverwood Wood
+tile.etfuturum.thaumcraft_stripped_silverwood_wood.name=Stripped Silverwood Wood
+item.etfuturum.thaumcraft_silverwood_boat.name=Silverwood Boat
+item.etfuturum.thaumcraft_silverwood_chest_boat.name=Silverwood Boat with Chest
 
 tile.etfuturum.white_glazed_terracotta.name=White Glazed Terracotta
 tile.etfuturum.orange_glazed_terracotta.name=Orange Glazed Terracotta

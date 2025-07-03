@@ -28,6 +28,9 @@ public class BaseDoor extends BlockDoor {
 		if(type.split("_")[0].equals("bop")) {
 			mod = "biomesoplenty:";
 			type = type.substring(4, type.length());
+		} else if(type.split("_")[0].equals("thaumcraft")) {
+			mod = "thaumcraft:";
+			type = type.substring(11, type.length());
 		} else {
 			mod = "";
 		}

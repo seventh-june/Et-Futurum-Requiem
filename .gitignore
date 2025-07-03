@@ -70,8 +70,6 @@ README.txt
 *.psd
 *.pdn
 
-/src/main/resources/assets/thaumcraft
-
 ##API
 /src/api
 /models

@@ -114,6 +114,11 @@ public enum ModItems {
 	BOP_MAHOGANY_BOAT(ConfigBlocksItems.enableNewBoats && ModsList.BIOMES_O_PLENTY.isLoaded(), new ItemNewBoat("biomesoplenty", "mahogany", () -> GameRegistry.findItem("BiomesOPlenty", "planks"), 14, false, false)),
 	BOP_MAHOGANY_CHEST_BOAT(ConfigBlocksItems.enableNewBoats && ModsList.BIOMES_O_PLENTY.isLoaded(), new ItemNewBoat("biomesoplenty", "mahogany", () -> GameRegistry.findItem("BiomesOPlenty", "planks"), 14, true, false)),
 
+	THAUMCRAFT_GREATWOOD_BOAT(ConfigBlocksItems.enableNewBoats && ModsList.THAUMCRAFT.isLoaded(), new ItemNewBoat("thaumcraft", "greatwood", () -> GameRegistry.findItem("Thaumcraft", "blockWoodenDevice"), 6, false, false)),
+	THAUMCRAFT_GREATWOOD_CHEST_BOAT(ConfigBlocksItems.enableNewBoats && ModsList.THAUMCRAFT.isLoaded(), new ItemNewBoat("thaumcraft", "greatwood", () -> GameRegistry.findItem("Thaumcraft", "blockWoodenDevice"), 6, true, false)),
+	THAUMCRAFT_SILVERWOOD_BOAT(ConfigBlocksItems.enableNewBoats && ModsList.THAUMCRAFT.isLoaded(), new ItemNewBoat("thaumcraft", "silverwood", () -> GameRegistry.findItem("Thaumcraft", "blockWoodenDevice"), 7, false, false)),
+	THAUMCRAFT_SILVERWOOD_CHEST_BOAT(ConfigBlocksItems.enableNewBoats && ModsList.THAUMCRAFT.isLoaded(), new ItemNewBoat("thaumcraft", "silverwood", () -> GameRegistry.findItem("Thaumcraft", "blockWoodenDevice"), 7, true, false)),
+
 	//legacy sign items -- new signs use their ItemBlock as the sign item instead
 	ITEM_SIGN_SPRUCE(ConfigBlocksItems.enableVanillaSigns, new ItemWoodSign((BlockWoodSign) ModBlocks.SIGN_SPRUCE.get())),
 	ITEM_SIGN_BIRCH(ConfigBlocksItems.enableVanillaSigns, new ItemWoodSign((BlockWoodSign) ModBlocks.SIGN_BIRCH.get())),

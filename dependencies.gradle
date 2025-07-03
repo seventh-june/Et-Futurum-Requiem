@@ -69,5 +69,5 @@ dependencies {
     }
 
     compileOnly files("libs/BiomesOPlenty-1.7.10-2.1.0.2308-universal.jar")
-
+    compileOnly files("libs/salisarcana-v2.1.0-dev.jar")
 }

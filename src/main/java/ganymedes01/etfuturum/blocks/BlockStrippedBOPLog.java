@@ -26,19 +26,19 @@ public class BlockStrippedBOPLog extends BlockBOPLog implements ISubBlocksBlock 
 	private boolean isStripped;
 	private final LogCategory category;
 
-	public BlockStrippedBOPLog(LogCategory cat, String name, boolean isWood0, boolean isStripped0) 
+	public BlockStrippedBOPLog(LogCategory cat, String name, boolean wood, boolean stripped) 
 	{
 		super(cat);
 		this.setBlockName(Utils.getUnlocalisedName(name));
 		this.setCreativeTab(EtFuturum.creativeTabBlocks);
 		category = cat;
-		if(isStripped0) {
+		if(stripped) {
 			prefix = "stripped_";
 			isStripped = true;
 		} else {
 			prefix = "";
 		}
-		if(isWood0) {
+		if(wood) {
 			suffix = "_wood";
 			isWood = true;
 		} else {
