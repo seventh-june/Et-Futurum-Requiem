@@ -1,5 +1,6 @@
 package ganymedes01.etfuturum.api;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import ganymedes01.etfuturum.ModBlocks;
 import ganymedes01.etfuturum.api.mappings.RegistryMapping;
 import ganymedes01.etfuturum.configuration.configs.ConfigBlocksItems;
@@ -81,10 +82,67 @@ public class StrippedLogRegistry {
 			addLog(Blocks.log, 1, ModBlocks.LOG_STRIPPED.get(), 1);
 			addLog(Blocks.log, 2, ModBlocks.LOG_STRIPPED.get(), 2);
 			addLog(Blocks.log, 3, ModBlocks.LOG_STRIPPED.get(), 3);
+
+			
 		}
 		if (ModBlocks.LOG2_STRIPPED.isEnabled()) {
 			addLog(Blocks.log2, 0, ModBlocks.LOG2_STRIPPED.get(), 0);
 			addLog(Blocks.log2, 1, ModBlocks.LOG2_STRIPPED.get(), 1);
+		}
+		if(ModBlocks.BOP_LOG_STRIPPED.isEnabled()) {
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs1"), 0, ModBlocks.BOP_LOG_STRIPPED.get(), 0);
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs1"), 1, ModBlocks.BOP_LOG_STRIPPED.get(), 1);
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs1"), 2, ModBlocks.BOP_LOG_STRIPPED.get(), 2);
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs1"), 3, ModBlocks.BOP_LOG_STRIPPED.get(), 3);
+		}
+
+		if(ModBlocks.BOP_LOG_STRIPPED2.isEnabled()) {
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs2"), 0, ModBlocks.BOP_LOG_STRIPPED2.get(), 0);
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs2"), 1, ModBlocks.BOP_LOG_STRIPPED2.get(), 1);
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs2"), 2, ModBlocks.BOP_LOG_STRIPPED2.get(), 2);
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs2"), 3, ModBlocks.BOP_LOG_STRIPPED2.get(), 3);
+		}
+
+		if(ModBlocks.BOP_LOG_STRIPPED3.isEnabled()) {
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs3"), 0, ModBlocks.BOP_LOG_STRIPPED3.get(), 0);
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs3"), 1, ModBlocks.BOP_LOG_STRIPPED3.get(), 1);
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs3"), 2, ModBlocks.BOP_LOG_STRIPPED3.get(), 2);
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs3"), 3, ModBlocks.BOP_LOG_STRIPPED3.get(), 3);
+		}
+
+		if(ModBlocks.BOP_LOG_STRIPPED4.isEnabled()) {
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs4"), 0, ModBlocks.BOP_LOG_STRIPPED4.get(), 0);
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs4"), 1, ModBlocks.BOP_LOG_STRIPPED4.get(), 1);
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs4"), 2, ModBlocks.BOP_LOG_STRIPPED4.get(), 2);
+			addLog(GameRegistry.findBlock("BiomesOPlenty", "logs4"), 3, ModBlocks.BOP_LOG_STRIPPED4.get(), 3);
+		}
+
+		if(ModBlocks.BOP_WOOD.isEnabled() && ModBlocks.BOP_WOOD_STRIPPED.isEnabled()) {
+			addLog(ModBlocks.BOP_WOOD.get(), 0, ModBlocks.BOP_WOOD_STRIPPED.get(), 0);
+			addLog(ModBlocks.BOP_WOOD.get(), 1, ModBlocks.BOP_WOOD_STRIPPED.get(), 1);
+			addLog(ModBlocks.BOP_WOOD.get(), 2, ModBlocks.BOP_WOOD_STRIPPED.get(), 2);
+			addLog(ModBlocks.BOP_WOOD.get(), 3, ModBlocks.BOP_WOOD_STRIPPED.get(), 3);
+		}
+
+		if(ModBlocks.BOP_WOOD2.isEnabled() && ModBlocks.BOP_WOOD_STRIPPED2.isEnabled()) {
+			addLog(ModBlocks.BOP_WOOD2.get(), 0, ModBlocks.BOP_WOOD_STRIPPED2.get(), 0);
+			addLog(ModBlocks.BOP_WOOD2.get(), 1, ModBlocks.BOP_WOOD_STRIPPED2.get(), 1);
+			addLog(ModBlocks.BOP_WOOD2.get(), 2, ModBlocks.BOP_WOOD_STRIPPED2.get(), 2);
+			addLog(ModBlocks.BOP_WOOD2.get(), 3, ModBlocks.BOP_WOOD_STRIPPED2.get(), 3);
+		}
+
+		if(ModBlocks.BOP_WOOD3.isEnabled() && ModBlocks.BOP_WOOD_STRIPPED3.isEnabled()) {
+			addLog(ModBlocks.BOP_WOOD3.get(), 0, ModBlocks.BOP_WOOD_STRIPPED3.get(), 0);
+			addLog(ModBlocks.BOP_WOOD3.get(), 1, ModBlocks.BOP_WOOD_STRIPPED3.get(), 1);
+			addLog(ModBlocks.BOP_WOOD3.get(), 2, ModBlocks.BOP_WOOD_STRIPPED3.get(), 2);
+			addLog(ModBlocks.BOP_WOOD3.get(), 3, ModBlocks.BOP_WOOD_STRIPPED3.get(), 3);
+		}
+
+		if(ModBlocks.BOP_WOOD4.isEnabled() && ModBlocks.BOP_WOOD_STRIPPED4.isEnabled()) {
+			addLog(ModBlocks.BOP_WOOD4.get(), 0, ModBlocks.BOP_WOOD_STRIPPED4.get(), 0);
+			addLog(ModBlocks.BOP_WOOD4.get(), 1, ModBlocks.BOP_WOOD_STRIPPED4.get(), 1);
+			addLog(ModBlocks.BOP_WOOD4.get(), 2, ModBlocks.BOP_WOOD_STRIPPED4.get(), 2);
+			addLog(ModBlocks.BOP_WOOD4.get(), 3, ModBlocks.BOP_WOOD_STRIPPED4.get(), 3);
 		}
 
 		if (ModBlocks.BARK.isEnabled() && ModBlocks.WOOD_STRIPPED.isEnabled()) {

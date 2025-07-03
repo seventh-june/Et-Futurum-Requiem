@@ -57,6 +57,7 @@ public class ModRecipes {
 	public static final String[] dye_names = new String[]{"white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"};
 	public static final String[] woodTypes = new String[]{"oak", "spruce", "birch", "jungle", "acacia", "dark_oak"};
 	public static final String[] modernWoodTypes = new String[]{"crimson", "warped", "mangrove", "cherry"};
+	public static final String[] bopWoodTypes = new String[]{ "sacredoak", "cherry", "dark", "fir", "ethereal", "magic", "mangrove", "palm", "redwood", "willow", "bamboo", "pine", "hellbark", "jacaranda", "mahogany" };
 	private static final boolean[] modernWoodTypesEnabled = new boolean[5];
 
 	public static void init() {
@@ -561,6 +562,12 @@ public class ModRecipes {
 				addShapedRecipe(ModBlocks.WOOD_FENCE.newItemStack(3, 4), "xyx", "xyx", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 4), 'y', "stickWood");
 				addShapedRecipe(ModBlocks.WOOD_SLAB.newItemStack(6, 4), "xxx", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 4));
 			}
+
+			if(ModsList.BIOMES_O_PLENTY.isLoaded()) {
+				for (int i = 0; i < bopWoodTypes.length; i++) {
+					addShapedRecipe(ModBlocks.BOP_WOOD_FENCE.newItemStack(3, i), "xyx", "xyx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, i), 'y', "stickWood");
+				}
+			}
 		}
 
 		addShapedRecipe(ModBlocks.CRIMSON_STAIRS.newItemStack(4), "x  ", "xx ", "xxx", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 0));
@@ -589,6 +596,24 @@ public class ModRecipes {
 		addShapedRecipe(ModBlocks.CHERRY_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 3), 'y', "stickWood");
 		addShapedRecipe(ModBlocks.BAMBOO_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 4), 'y', "stickWood");
 
+		if(ModsList.BIOMES_O_PLENTY.isLoaded()) {
+			addShapedRecipe(ModBlocks.BOP_SACREDOAK_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 0), 'y', "stickWood");
+			addShapedRecipe(ModBlocks.BOP_CHERRY_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 1), 'y', "stickWood");
+			addShapedRecipe(ModBlocks.BOP_DARK_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 2), 'y', "stickWood");
+			addShapedRecipe(ModBlocks.BOP_FIR_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 3), 'y', "stickWood");
+			addShapedRecipe(ModBlocks.BOP_ETHEREAL_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 4), 'y', "stickWood");
+			addShapedRecipe(ModBlocks.BOP_MAGIC_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 5), 'y', "stickWood");
+			addShapedRecipe(ModBlocks.BOP_MANGROVE_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 6), 'y', "stickWood");
+			addShapedRecipe(ModBlocks.BOP_PALM_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 7), 'y', "stickWood");
+			addShapedRecipe(ModBlocks.BOP_REDWOOD_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 8), 'y', "stickWood");
+			addShapedRecipe(ModBlocks.BOP_WILLOW_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 9), 'y', "stickWood");
+			addShapedRecipe(ModBlocks.BOP_BAMBOO_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 10), 'y', "stickWood");
+			addShapedRecipe(ModBlocks.BOP_PINE_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 11), 'y', "stickWood");
+			addShapedRecipe(ModBlocks.BOP_HELLBARK_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 12), 'y', "stickWood");
+			addShapedRecipe(ModBlocks.BOP_JACARANDA_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 13), 'y', "stickWood");
+			addShapedRecipe(ModBlocks.BOP_MAHOGANY_FENCE_GATE.newItemStack(), "yxy", "yxy", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 14), 'y', "stickWood");
+		}
+
 		int output = ConfigFunctions.enableDoorRecipeBuffs ? 3 : 1;
 		addShapedRecipe(ModBlocks.DOOR_SPRUCE.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(Blocks.planks, 1, 1));
 		addShapedRecipe(ModBlocks.DOOR_BIRCH.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(Blocks.planks, 1, 2));
@@ -602,6 +627,24 @@ public class ModRecipes {
 		addShapedRecipe(ModBlocks.CHERRY_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 3));
 		addShapedRecipe(ModBlocks.BAMBOO_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 4));
 
+		if(ModsList.BIOMES_O_PLENTY.isLoaded()) {
+			addShapedRecipe(ModBlocks.BOP_SACREDOAK_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 0));
+			addShapedRecipe(ModBlocks.BOP_CHERRY_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 1));
+			addShapedRecipe(ModBlocks.BOP_DARK_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 2));
+			addShapedRecipe(ModBlocks.BOP_FIR_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 3));
+			addShapedRecipe(ModBlocks.BOP_ETHEREAL_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 4));
+			addShapedRecipe(ModBlocks.BOP_MAGIC_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 5));
+			addShapedRecipe(ModBlocks.BOP_MANGROVE_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 6));
+			addShapedRecipe(ModBlocks.BOP_PALM_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 7));
+			addShapedRecipe(ModBlocks.BOP_REDWOOD_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 8));
+			addShapedRecipe(ModBlocks.BOP_WILLOW_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 9));
+			addShapedRecipe(ModBlocks.BOP_BAMBOO_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 10));
+			addShapedRecipe(ModBlocks.BOP_PINE_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 11));
+			addShapedRecipe(ModBlocks.BOP_HELLBARK_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 12));
+			addShapedRecipe(ModBlocks.BOP_JACARANDA_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 13));
+			addShapedRecipe(ModBlocks.BOP_MAHOGANY_DOOR.newItemStack(output), "xx", "xx", "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 14));
+		}
+
 		addShapedRecipe(ModBlocks.TRAPDOOR_SPRUCE.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(Blocks.planks, 1, 1));
 		addShapedRecipe(ModBlocks.TRAPDOOR_BIRCH.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(Blocks.planks, 1, 2));
 		addShapedRecipe(ModBlocks.TRAPDOOR_JUNGLE.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(Blocks.planks, 1, 3));
@@ -613,6 +656,24 @@ public class ModRecipes {
 		addShapedRecipe(ModBlocks.MANGROVE_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 2));
 		addShapedRecipe(ModBlocks.CHERRY_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 3));
 		addShapedRecipe(ModBlocks.BAMBOO_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 4));
+
+		if(ModsList.BIOMES_O_PLENTY.isLoaded()) {
+			addShapedRecipe(ModBlocks.BOP_SACREDOAK_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 0));
+			addShapedRecipe(ModBlocks.BOP_CHERRY_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 1));
+			addShapedRecipe(ModBlocks.BOP_DARK_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 2));
+			addShapedRecipe(ModBlocks.BOP_FIR_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 3));
+			addShapedRecipe(ModBlocks.BOP_ETHEREAL_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 4));
+			addShapedRecipe(ModBlocks.BOP_MAGIC_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 5));
+			addShapedRecipe(ModBlocks.BOP_MANGROVE_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 6));
+			addShapedRecipe(ModBlocks.BOP_PALM_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 7));
+			addShapedRecipe(ModBlocks.BOP_REDWOOD_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 8));
+			addShapedRecipe(ModBlocks.BOP_WILLOW_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 9));
+			addShapedRecipe(ModBlocks.BOP_BAMBOO_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 10));
+			addShapedRecipe(ModBlocks.BOP_PINE_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 11));
+			addShapedRecipe(ModBlocks.BOP_HELLBARK_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 12));
+			addShapedRecipe(ModBlocks.BOP_JACARANDA_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 13));
+			addShapedRecipe(ModBlocks.BOP_MAHOGANY_TRAPDOOR.newItemStack(2), "xxx", "xxx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 14));
+		}
 
 		if (!ModsList.GTNH.isLoaded()) {
 			addShapedRecipe(ModBlocks.IRON_TRAPDOOR.newItemStack(), "xx", "xx", 'x', "ingotIron");
@@ -629,6 +690,24 @@ public class ModRecipes {
 			addShapedRecipe(ModBlocks.CHERRY_BUTTON.newItemStack(), "x", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 3));
 			addShapedRecipe(ModBlocks.BAMBOO_BUTTON.newItemStack(), "x", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 4));
 
+			if(ModsList.BIOMES_O_PLENTY.isLoaded()) {
+				addShapedRecipe(ModBlocks.BOP_SACREDOAK_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 0));
+				addShapedRecipe(ModBlocks.BOP_CHERRY_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 1));
+				addShapedRecipe(ModBlocks.BOP_DARK_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 2));
+				addShapedRecipe(ModBlocks.BOP_FIR_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 3));
+				addShapedRecipe(ModBlocks.BOP_ETHEREAL_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 4));
+				addShapedRecipe(ModBlocks.BOP_MAGIC_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 5));
+				addShapedRecipe(ModBlocks.BOP_MANGROVE_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 6));
+				addShapedRecipe(ModBlocks.BOP_PALM_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 7));
+				addShapedRecipe(ModBlocks.BOP_REDWOOD_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 8));
+				addShapedRecipe(ModBlocks.BOP_WILLOW_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 9));
+				addShapedRecipe(ModBlocks.BOP_BAMBOO_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 10));
+				addShapedRecipe(ModBlocks.BOP_PINE_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 11));
+				addShapedRecipe(ModBlocks.BOP_HELLBARK_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 12));
+				addShapedRecipe(ModBlocks.BOP_JACARANDA_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 13));
+				addShapedRecipe(ModBlocks.BOP_MAHOGANY_BUTTON.newItemStack(), "x", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 14));
+			}
+
 			addShapedRecipe(ModBlocks.PRESSURE_PLATE_SPRUCE.newItemStack(), "xx", 'x', new ItemStack(Blocks.planks, 1, 1));
 			addShapedRecipe(ModBlocks.PRESSURE_PLATE_BIRCH.newItemStack(), "xx", 'x', new ItemStack(Blocks.planks, 1, 2));
 			addShapedRecipe(ModBlocks.PRESSURE_PLATE_JUNGLE.newItemStack(), "xx", 'x', new ItemStack(Blocks.planks, 1, 3));
@@ -641,6 +720,24 @@ public class ModRecipes {
 			addShapedRecipe(ModBlocks.CHERRY_PRESSURE_PLATE.newItemStack(), "xx", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 3));
 			addShapedRecipe(ModBlocks.BAMBOO_PRESSURE_PLATE.newItemStack(), "xx", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 4));
 
+			if(ModsList.BIOMES_O_PLENTY.isLoaded()) {
+				addShapedRecipe(ModBlocks.BOP_SACREDOAK_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 0));
+				addShapedRecipe(ModBlocks.BOP_CHERRY_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 1));
+				addShapedRecipe(ModBlocks.BOP_DARK_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 2));
+				addShapedRecipe(ModBlocks.BOP_FIR_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 3));
+				addShapedRecipe(ModBlocks.BOP_ETHEREAL_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 4));
+				addShapedRecipe(ModBlocks.BOP_MAGIC_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 5));
+				addShapedRecipe(ModBlocks.BOP_MANGROVE_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 6));
+				addShapedRecipe(ModBlocks.BOP_PALM_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 7));
+				addShapedRecipe(ModBlocks.BOP_REDWOOD_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 8));
+				addShapedRecipe(ModBlocks.BOP_WILLOW_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 9));
+				addShapedRecipe(ModBlocks.BOP_BAMBOO_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 10));
+				addShapedRecipe(ModBlocks.BOP_PINE_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 11));
+				addShapedRecipe(ModBlocks.BOP_HELLBARK_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 12));
+				addShapedRecipe(ModBlocks.BOP_JACARANDA_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 13));
+				addShapedRecipe(ModBlocks.BOP_MAHOGANY_PRESSURE_PLATE.newItemStack(), "xx", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 14));
+			}
+
 			addShapedRecipe(ModItems.ITEM_SIGN_SPRUCE.newItemStack(3), "xxx", "xxx", " y ", 'x', new ItemStack(Blocks.planks, 1, 1), 'y', "stickWood");
 			addShapedRecipe(ModItems.ITEM_SIGN_BIRCH.newItemStack(3), "xxx", "xxx", " y ", 'x', new ItemStack(Blocks.planks, 1, 2), 'y', "stickWood");
 			addShapedRecipe(ModItems.ITEM_SIGN_JUNGLE.newItemStack(3), "xxx", "xxx", " y ", 'x', new ItemStack(Blocks.planks, 1, 3), 'y', "stickWood");
@@ -652,6 +749,24 @@ public class ModRecipes {
 			addShapedRecipe(ModBlocks.MANGROVE_SIGN.newItemStack(3), "xxx", "xxx", " y ", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 2), 'y', "stickWood");
 			addShapedRecipe(ModBlocks.CHERRY_SIGN.newItemStack(3), "xxx", "xxx", " y ", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 3), 'y', "stickWood");
 			addShapedRecipe(ModBlocks.BAMBOO_SIGN.newItemStack(3), "xxx", "xxx", " y ", 'x', ModBlocks.WOOD_PLANKS.newItemStack(1, 4), 'y', "stickWood");
+
+			if(ModsList.BIOMES_O_PLENTY.isLoaded()) {
+				addShapedRecipe(ModBlocks.BOP_SACREDOAK_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 0), 'y', "stickWood");
+				addShapedRecipe(ModBlocks.BOP_CHERRY_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 1), 'y', "stickWood");
+				addShapedRecipe(ModBlocks.BOP_DARK_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 2), 'y', "stickWood");
+				addShapedRecipe(ModBlocks.BOP_FIR_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 3), 'y', "stickWood");
+				addShapedRecipe(ModBlocks.BOP_ETHEREAL_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 4), 'y', "stickWood");
+				addShapedRecipe(ModBlocks.BOP_MAGIC_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 5), 'y', "stickWood");
+				addShapedRecipe(ModBlocks.BOP_MANGROVE_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 6), 'y', "stickWood");
+				addShapedRecipe(ModBlocks.BOP_PALM_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 7), 'y', "stickWood");
+				addShapedRecipe(ModBlocks.BOP_REDWOOD_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 8), 'y', "stickWood");
+				addShapedRecipe(ModBlocks.BOP_WILLOW_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 9), 'y', "stickWood");
+				addShapedRecipe(ModBlocks.BOP_BAMBOO_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 10), 'y', "stickWood");
+				addShapedRecipe(ModBlocks.BOP_PINE_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 11), 'y', "stickWood");
+				addShapedRecipe(ModBlocks.BOP_HELLBARK_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 12), 'y', "stickWood");
+				addShapedRecipe(ModBlocks.BOP_JACARANDA_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 13), 'y', "stickWood");
+				addShapedRecipe(ModBlocks.BOP_MAHOGANY_SIGN.newItemStack(), "xxx", "xxx", " y ", 'x', new ItemStack(GameRegistry.findBlock("BiomesOPlenty", "planks"), 1, 14), 'y', "stickWood");
+			}
 		}
 
 		if (!ModsList.GTNH.isLoaded()) {

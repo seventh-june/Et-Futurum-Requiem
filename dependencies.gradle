@@ -51,7 +51,7 @@ dependencies {
     compileOnly "codechicken:CodeChickenCore:1.7.10-1.0.7.47:dev"
     compileOnly 'com.github.GTNewHorizons:ironchest:6.1.2'
     compileOnly 'curse.maven:applied-energistics-2-223794:2296430'
-
+    
     compileOnly("com.github.GTNewHorizons:TinkersConstruct:1.13.25-GTNH:dev") {
         transitive = false
     }
@@ -67,4 +67,7 @@ dependencies {
     shadowImplementation('com.github.makamys:MCLib:0.3.7.7') {
         exclude group: "codechicken"
     }
+
+    compileOnly files("libs/BiomesOPlenty-1.7.10-2.1.0.2308-universal.jar")
+
 }

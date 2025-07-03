@@ -18,12 +18,20 @@ import java.util.Random;
 
 public class BaseDoor extends BlockDoor {
 
+	String mod;
+
 	public BaseDoor(Material material, String type) {
 		super(material);
 		disableStats();
 		setHardness(3.0F);
-		setBlockTextureName(type + "_door");
 		setBlockName(Utils.getUnlocalisedName(type + "_door"));
+		if(type.split("_")[0].equals("bop")) {
+			mod = "biomesoplenty:";
+			type = type.substring(4, type.length());
+		} else {
+			mod = "";
+		}
+		setBlockTextureName(mod + type + "_door");
 		setCreativeTab(EtFuturum.creativeTabBlocks);
 		setBlockSound(getMaterial() == Material.iron ? Block.soundTypeMetal : Block.soundTypeWood);
 	}

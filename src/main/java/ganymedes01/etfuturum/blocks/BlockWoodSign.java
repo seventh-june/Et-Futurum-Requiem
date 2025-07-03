@@ -23,14 +23,25 @@ public class BlockWoodSign extends BlockSign {
 	private final Block baseBlock;
 	private final int meta;
 	public final String type;
-
+	public final String signTexture;
 	public final boolean standing;
+
+	String mod;
+	String item;
 
 	public BlockWoodSign(Class<? extends TileEntity> p_i45426_1_, boolean p_i45426_2_, String type, Block block, int meta) {
 		super(p_i45426_1_, p_i45426_2_);
 		this.meta = meta;
-		baseBlock = block;
 		this.type = type;
+		baseBlock = block;
+		if(type.split("_")[0].equals("bop")) {
+			mod = "biomesoplenty:";
+			item = type.substring(4, type.length());
+		} else {
+			mod = "";
+			item = type;
+		}
+		this.signTexture = mod + "textures/entity/sign/" + item;
 		standing = p_i45426_2_;
 		if (standing) {
 			prevSign = this;
@@ -83,6 +94,6 @@ public class BlockWoodSign extends BlockSign {
 
 	@Override
 	public String getItemIconName() {
-		return type + "_sign";
+		return mod + item + "_sign";
 	}
 }
