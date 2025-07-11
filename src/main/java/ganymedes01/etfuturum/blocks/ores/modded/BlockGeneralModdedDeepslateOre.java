@@ -1,8 +1,10 @@
 package ganymedes01.etfuturum.blocks.ores.modded;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import com.google.common.collect.Lists;
 import ganymedes01.etfuturum.blocks.BaseSubtypesBlock;
 import ganymedes01.etfuturum.client.sound.ModSounds;
+import ganymedes01.etfuturum.compat.ModsList;
 import ganymedes01.etfuturum.configuration.configs.ConfigFunctions;
 import ganymedes01.etfuturum.core.utils.DummyWorld;
 import ganymedes01.etfuturum.core.utils.IInitAction;
@@ -25,7 +27,6 @@ public class BlockGeneralModdedDeepslateOre extends BaseSubtypesBlock implements
 	public final String[] ores;
 	private final float[] hardnesses;
 	private final float[] resistances;
-
 	public BlockGeneralModdedDeepslateOre(String... names) {
 		super(Material.rock, names);
 		ores = new String[names.length];
@@ -78,6 +79,13 @@ public class BlockGeneralModdedDeepslateOre extends BaseSubtypesBlock implements
 		DummyWorld world = new DummyWorld();
 		for (int i = 0; i < ores.length; i++) {
 			ItemStack stack = Utils.getFirstNonDeepslateBlockFromTag(ores[i], new ItemStack(Blocks.iron_ore));
+			if(ModsList.MATERIALIS.isLoaded()) {
+				int materialisMeta = i;
+				if(i == 0) {
+					materialisMeta = 7;
+				}
+				stack = new ItemStack(GameRegistry.findBlock("materialis", "ore"), 1, materialisMeta);
+			}
 			Block block = Block.getBlockFromItem(stack.getItem());
 			//We do this cursed shit because these functions have no meta input. So we have to place it to "simulate" the method to get an accurate output for that specific meta.
 			//Since many mod ores are based on meta we need to do this to ensure the returned resistance of the block is accurate. There is probably a better way to do this.
