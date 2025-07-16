@@ -371,7 +371,8 @@ public class ModRecipes {
 	}
 
 	private static void registerRecipes() {
-		if (!ModsList.GTNH.isLoaded()) {
+		if(!ModsList.MATERIALIS.isLoaded()) {
+			if (!ModsList.GTNH.isLoaded()) {
 			addShapedRecipe(ModBlocks.OLD_GRAVEL.newItemStack(4), "xy", "yx", 'x', ModBlocks.COARSE_DIRT.get(), 'y', Blocks.gravel);
 		}
 
@@ -1377,7 +1378,8 @@ public class ModRecipes {
 		addShapedRecipe(ModBlocks.RAW_ORE_BLOCK.newItemStack(1, 2), "xxx", "xxx", "xxx", 'x', ModItems.RAW_ORE.newItemStack(1, 2));
 		addShapedRecipe(ModItems.RAW_ORE.newItemStack(9, 2), "x", 'x', ModBlocks.RAW_ORE_BLOCK.newItemStack(1, 2));
 		addSmelting(ModItems.RAW_ORE.newItemStack(1, 2), new ItemStack(Items.gold_ingot, 1, 0), 0.7F);
-
+		}
+		
 		registerGeneralRawOres();
 		registerModSupportRawOres();
 	}
