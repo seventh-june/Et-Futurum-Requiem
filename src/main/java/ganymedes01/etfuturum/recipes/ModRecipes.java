@@ -371,6 +371,35 @@ public class ModRecipes {
 	}
 
 	private static void registerRecipes() {
+		if (ModItems.TIPPED_ARROW.isEnabled() && ModItems.LINGERING_POTION.isEnabled()) {
+			RecipeSorter.register(Reference.MOD_ID + ".RecipeTippedArrow", RecipeTippedArrow.class, Category.SHAPED, "after:minecraft:shaped");
+			GameRegistry.addRecipe(new RecipeTippedArrow(ModItems.TIPPED_ARROW.newItemStack(), "xxx", "xyx", "xxx", 'x', Items.arrow, 'y', ModItems.LINGERING_POTION.newItemStack(1, OreDictionary.WILDCARD_VALUE)));
+		}
+
+		addSmelting(ModItems.MUTTON_RAW.get(), ModItems.MUTTON_COOKED.newItemStack(), 0.35F);
+
+		for (EnumColor colour : EnumColor.VALUES) {
+			addShapedRecipe(ModBlocks.BANNER.newItemStack(1, colour.getDamage()), "xxx", "xxx", " y ", 'x', new ItemStack(Blocks.wool, 1, colour.getDamage()), 'y', "stickWood");
+		}
+		GameRegistry.addRecipe(new RecipeDuplicatePattern());
+		GameRegistry.addRecipe(new RecipeAddPattern());
+
+		addShapedRecipe(ModItems.WOODEN_ARMORSTAND.newItemStack(), "xxx", " x ", "xyx", 'x', "stickWood", 'y', new ItemStack(Blocks.stone_slab));
+
+		addShapedRecipe(ModItems.RABBIT_STEW.newItemStack(), " R ", "CPM", " B ", 'R', ModItems.RABBIT_COOKED.newItemStack(), 'C', Items.carrot, 'P', Items.baked_potato, 'M', Blocks.brown_mushroom, 'B', "bowlWood");
+		addShapedRecipe(ModItems.RABBIT_STEW.newItemStack(), " R ", "CPD", " B ", 'R', ModItems.RABBIT_COOKED.newItemStack(), 'C', Items.carrot, 'P', Items.baked_potato, 'D', Blocks.red_mushroom, 'B', "bowlWood");
+		addSmelting(ModItems.RABBIT_RAW.get(), ModItems.RABBIT_COOKED.newItemStack(), 0.35F);
+		addShapedRecipe(new ItemStack(Items.leather), "xx", "xx", 'x', ModItems.RABBIT_HIDE.get());
+
+		if (ModBlocks.SHULKER_BOX.isEnabled()) {
+			for (int i = ore_dyes.length - 1; i >= 0; i--) {//Dyed box recipes
+				ItemStack shulker = ModBlocks.SHULKER_BOX.newItemStack();
+				shulker.setTagCompound(new NBTTagCompound());
+				shulker.getTagCompound().setByte("Color", (byte) (16 - i));
+				GameRegistry.addRecipe(new RecipeDyedShulkerBox(shulker, new Object[]{ModBlocks.SHULKER_BOX.get(), ore_dyes[i]}));
+			}
+		}
+
 		if(!ModsList.MATERIALIS.isLoaded()) {
 			if (!ModsList.GTNH.isLoaded()) {
 			addShapedRecipe(ModBlocks.OLD_GRAVEL.newItemStack(4), "xy", "yx", 'x', ModBlocks.COARSE_DIRT.get(), 'y', Blocks.gravel);
@@ -398,8 +427,6 @@ public class ModRecipes {
 
 			addShapedRecipe(ModBlocks.COARSE_DIRT.newItemStack(4), "xy", "yx", 'x', new ItemStack(Blocks.dirt), 'y', new ItemStack(Blocks.gravel));
 		}
-
-		addSmelting(ModItems.MUTTON_RAW.get(), ModItems.MUTTON_COOKED.newItemStack(), 0.35F);
 
 		if (!ModsList.GTNH.isLoaded()) {
 			addShapedRecipe(new ItemStack(Items.iron_ingot), "xxx", "xxx", "xxx", 'x', "nuggetIron");
@@ -786,19 +813,6 @@ public class ModRecipes {
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.nether_brick_fence, 6), "xyx", "xyx", 'x', Blocks.nether_brick, 'y', "ingotBrickNether"));
 		}
 
-		for (EnumColor colour : EnumColor.VALUES) {
-			addShapedRecipe(ModBlocks.BANNER.newItemStack(1, colour.getDamage()), "xxx", "xxx", " y ", 'x', new ItemStack(Blocks.wool, 1, colour.getDamage()), 'y', "stickWood");
-		}
-		GameRegistry.addRecipe(new RecipeDuplicatePattern());
-		GameRegistry.addRecipe(new RecipeAddPattern());
-
-		addShapedRecipe(ModItems.WOODEN_ARMORSTAND.newItemStack(), "xxx", " x ", "xyx", 'x', "stickWood", 'y', new ItemStack(Blocks.stone_slab));
-
-		addShapedRecipe(ModItems.RABBIT_STEW.newItemStack(), " R ", "CPM", " B ", 'R', ModItems.RABBIT_COOKED.newItemStack(), 'C', Items.carrot, 'P', Items.baked_potato, 'M', Blocks.brown_mushroom, 'B', "bowlWood");
-		addShapedRecipe(ModItems.RABBIT_STEW.newItemStack(), " R ", "CPD", " B ", 'R', ModItems.RABBIT_COOKED.newItemStack(), 'C', Items.carrot, 'P', Items.baked_potato, 'D', Blocks.red_mushroom, 'B', "bowlWood");
-		addSmelting(ModItems.RABBIT_RAW.get(), ModItems.RABBIT_COOKED.newItemStack(), 0.35F);
-		addShapedRecipe(new ItemStack(Items.leather), "xx", "xx", 'x', ModItems.RABBIT_HIDE.get());
-
 		addSmelting(ModBlocks.SPONGE.newItemStack(1, 1), ConfigWorld.tileReplacementMode == -1 ? ModBlocks.SPONGE.newItemStack() : new ItemStack(Blocks.sponge), 0.15F);
 
 		addShapedRecipe(ModItems.BEETROOT_SOUP.newItemStack(), "xxx", "xxx", " y ", 'x', "cropBeetroot", 'y', "bowlWood");
@@ -828,11 +842,6 @@ public class ModRecipes {
 		addShapelessRecipe(new ItemStack(Items.dye, 1, 1), ModBlocks.ROSE.get());
 		addShapedRecipe(new ItemStack(Blocks.double_plant, 1, 4), "xx", "xx", "xx", 'x', ModBlocks.ROSE.newItemStack());
 		addShapedRecipe(ModBlocks.ROSE.newItemStack(12), "xx", 'x', new ItemStack(Blocks.double_plant, 1, 4));
-
-		if (ModItems.TIPPED_ARROW.isEnabled() && ModItems.LINGERING_POTION.isEnabled()) {
-			RecipeSorter.register(Reference.MOD_ID + ".RecipeTippedArrow", RecipeTippedArrow.class, Category.SHAPED, "after:minecraft:shaped");
-			GameRegistry.addRecipe(new RecipeTippedArrow(ModItems.TIPPED_ARROW.newItemStack(), "xxx", "xyx", "xxx", 'x', Items.arrow, 'y', ModItems.LINGERING_POTION.newItemStack(1, OreDictionary.WILDCARD_VALUE)));
-		}
 
 		if (!ModsList.GTNH.isLoaded()) {
 			for (int i = 0; i < ModBlocks.BEDS.length; i++) {
@@ -1198,14 +1207,7 @@ public class ModRecipes {
 
 			addShapedRecipe(ModBlocks.SHULKER_BOX.newItemStack(), "x", "c", "x", 'x', ModItems.SHULKER_SHELL.newItemStack(), 'c', new ItemStack(Blocks.chest));
 		}
-		if (ModBlocks.SHULKER_BOX.isEnabled()) {
-			for (int i = ore_dyes.length - 1; i >= 0; i--) {//Dyed box recipes
-				ItemStack shulker = ModBlocks.SHULKER_BOX.newItemStack();
-				shulker.setTagCompound(new NBTTagCompound());
-				shulker.getTagCompound().setByte("Color", (byte) (16 - i));
-				GameRegistry.addRecipe(new RecipeDyedShulkerBox(shulker, new Object[]{ModBlocks.SHULKER_BOX.get(), ore_dyes[i]}));
-			}
-		}
+
 		addShapedRecipe(ModItems.SHULKER_BOX_UPGRADE.newItemStack(), "XXX", "XYX", "XXX", 'X', "ingotIron", 'Y', ModItems.SHULKER_SHELL.get());
 		addShapedRecipe(ModItems.SHULKER_BOX_UPGRADE.newItemStack(1, 1), "XXX", "XYX", "XXX", 'X', "ingotCopper", 'Y', ModItems.SHULKER_SHELL.get());
 		addShapedRecipe(ModItems.SHULKER_BOX_UPGRADE.newItemStack(1, 2), "XYX", "XXX", "XXX", 'X', "ingotGold", 'Y', "ingotIron");
