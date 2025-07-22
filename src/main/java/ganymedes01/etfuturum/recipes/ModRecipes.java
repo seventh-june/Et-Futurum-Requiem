@@ -95,6 +95,7 @@ public class ModRecipes {
 
 	@SuppressWarnings("unchecked")
 	private static void tweakRecipes() {
+		if(!ModsList.MATERIALIS.isLoaded()) {
 		if (ConfigBlocksItems.enableExtraVanillaSlabs && !ModsList.GTNH.isLoaded()) {
 			removeFirstRecipeFor(Blocks.stone_slab, 0);
 		}
@@ -120,8 +121,9 @@ public class ModRecipes {
 			if (!ModsList.GTNH.isLoaded()) {
 				removeFirstRecipeFor(Items.boat);
 			}
-			Items.boat.setTextureName("oak_boat");
 		}
+		}
+		Items.boat.setTextureName("oak_boat");
 
 		if (ConfigFunctions.enableExtraBurnableBlocks) {
 			Blocks.fire.setFireInfo(Blocks.fence_gate, 5, 20);
