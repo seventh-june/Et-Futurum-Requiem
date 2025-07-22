@@ -1339,26 +1339,6 @@ public class ModRecipes {
 			addShapelessRecipe(ModBlocks.SOUL_SOIL.newItemStack(5), Blocks.dirt, Blocks.soul_sand, Blocks.soul_sand, Blocks.soul_sand, Blocks.soul_sand);
 		}
 
-		if (ConfigModCompat.moddedDeepslateOres) { //OreDict-based registration is only used when mod support is enabled
-			DeepslateOreRegistry.addOreByOreDict("oreCoal", ModBlocks.DEEPSLATE_COAL_ORE.get());
-			DeepslateOreRegistry.addOreByOreDict("oreLapis", ModBlocks.DEEPSLATE_LAPIS_ORE.get());
-			DeepslateOreRegistry.addOreByOreDict("oreDiamond", ModBlocks.DEEPSLATE_DIAMOND_ORE.get());
-			DeepslateOreRegistry.addOreByOreDict("oreEmerald", ModBlocks.DEEPSLATE_EMERALD_ORE.get());
-			DeepslateOreRegistry.addOreByOreDict("oreCopper", ModBlocks.DEEPSLATE_COPPER_ORE.get());
-			DeepslateOreRegistry.addOreByOreDict("oreIron", ModBlocks.DEEPSLATE_IRON_ORE.get());
-			DeepslateOreRegistry.addOreByOreDict("oreGold", ModBlocks.DEEPSLATE_GOLD_ORE.get());
-			DeepslateOreRegistry.addOreByOreDict("oreRedstone", ModBlocks.DEEPSLATE_REDSTONE_ORE.get());
-		}
-
-		addTagsAndDeepslate("Coal", ModBlocks.DEEPSLATE_COAL_ORE.newItemStack());
-		addTagsAndDeepslate("Lapis", ModBlocks.DEEPSLATE_LAPIS_ORE.newItemStack());
-		addTagsAndDeepslate("Diamond", ModBlocks.DEEPSLATE_DIAMOND_ORE.newItemStack());
-		addTagsAndDeepslate("Emerald", ModBlocks.DEEPSLATE_EMERALD_ORE.newItemStack());
-		addTagsAndDeepslate("Copper", ModBlocks.DEEPSLATE_COPPER_ORE.newItemStack());
-		addTagsAndDeepslate("Iron", ModBlocks.DEEPSLATE_IRON_ORE.newItemStack());
-		addTagsAndDeepslate("Gold", ModBlocks.DEEPSLATE_GOLD_ORE.newItemStack());
-		addTagsAndDeepslate("Redstone", ModBlocks.DEEPSLATE_REDSTONE_ORE.newItemStack());
-
 		registerGeneralDeepslateOres();
 		registerModSupportDeepslateOres();
 
@@ -1383,6 +1363,26 @@ public class ModRecipes {
 		addShapedRecipe(ModItems.RAW_ORE.newItemStack(9, 2), "x", 'x', ModBlocks.RAW_ORE_BLOCK.newItemStack(1, 2));
 		addSmelting(ModItems.RAW_ORE.newItemStack(1, 2), new ItemStack(Items.gold_ingot, 1, 0), 0.7F);
 		}
+
+				if (ConfigModCompat.moddedDeepslateOres) { //OreDict-based registration is only used when mod support is enabled
+			DeepslateOreRegistry.addOreByOreDict("oreCoal", ModBlocks.DEEPSLATE_COAL_ORE.get());
+			DeepslateOreRegistry.addOreByOreDict("oreLapis", ModBlocks.DEEPSLATE_LAPIS_ORE.get());
+			DeepslateOreRegistry.addOreByOreDict("oreDiamond", ModBlocks.DEEPSLATE_DIAMOND_ORE.get());
+			DeepslateOreRegistry.addOreByOreDict("oreEmerald", ModBlocks.DEEPSLATE_EMERALD_ORE.get());
+			DeepslateOreRegistry.addOreByOreDict("oreCopper", ModBlocks.DEEPSLATE_COPPER_ORE.get());
+			DeepslateOreRegistry.addOreByOreDict("oreIron", ModBlocks.DEEPSLATE_IRON_ORE.get());
+			DeepslateOreRegistry.addOreByOreDict("oreGold", ModBlocks.DEEPSLATE_GOLD_ORE.get());
+			DeepslateOreRegistry.addOreByOreDict("oreRedstone", ModBlocks.DEEPSLATE_REDSTONE_ORE.get());
+		}
+
+		addTagsAndDeepslate("Coal", ModBlocks.DEEPSLATE_COAL_ORE.newItemStack());
+		addTagsAndDeepslate("Lapis", ModBlocks.DEEPSLATE_LAPIS_ORE.newItemStack());
+		addTagsAndDeepslate("Diamond", ModBlocks.DEEPSLATE_DIAMOND_ORE.newItemStack());
+		addTagsAndDeepslate("Emerald", ModBlocks.DEEPSLATE_EMERALD_ORE.newItemStack());
+		addTagsAndDeepslate("Copper", ModBlocks.DEEPSLATE_COPPER_ORE.newItemStack());
+		addTagsAndDeepslate("Iron", ModBlocks.DEEPSLATE_IRON_ORE.newItemStack());
+		addTagsAndDeepslate("Gold", ModBlocks.DEEPSLATE_GOLD_ORE.newItemStack());
+		addTagsAndDeepslate("Redstone", ModBlocks.DEEPSLATE_REDSTONE_ORE.newItemStack());
 		
 		registerGeneralRawOres();
 		registerModSupportRawOres();
