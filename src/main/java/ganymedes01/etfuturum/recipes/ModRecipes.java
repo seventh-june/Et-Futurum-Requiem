@@ -59,6 +59,8 @@ public class ModRecipes {
 	public static final String[] modernWoodTypes = new String[]{"crimson", "warped", "mangrove", "cherry"};
 	public static final String[] bopWoodTypes = new String[]{ "sacredoak", "cherry", "dark", "fir", "ethereal", "magic", "mangrove", "palm", "redwood", "willow", "bamboo", "pine", "hellbark", "jacaranda", "mahogany" };
 	public static final String[] thaumcraftWoodTypes = new String[]{ "greatwood", "silverwood" };
+	public static final String[] witcheryWoodTypes = new String[]{ "rowan", "alder", "hawthorn" };
+
 	private static final boolean[] modernWoodTypesEnabled = new boolean[5];
 
 	public static void init() {

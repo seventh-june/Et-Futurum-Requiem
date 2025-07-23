@@ -122,6 +122,12 @@ public class StrippedLogRegistry {
 			addLog(GameRegistry.findBlock("Thaumcraft", "blockMagicalLog"), 1, ModBlocks.THAUMCRAFT_LOG_STRIPPED.get(), 1);
 		}
 
+		if(ModBlocks.WITCHERY_LOG_STRIPPED.isEnabled()) {
+			addLog(GameRegistry.findBlock("witchery", "witchlog"), 0, ModBlocks.WITCHERY_LOG_STRIPPED.get(), 0);
+			addLog(GameRegistry.findBlock("witchery", "witchlog"), 1, ModBlocks.WITCHERY_LOG_STRIPPED.get(), 1);
+			addLog(GameRegistry.findBlock("witchery", "witchlog"), 2, ModBlocks.WITCHERY_LOG_STRIPPED.get(), 2);
+		}
+
 		if(ModBlocks.BOP_WOOD.isEnabled() && ModBlocks.BOP_WOOD_STRIPPED.isEnabled()) {
 			addLog(ModBlocks.BOP_WOOD.get(), 0, ModBlocks.BOP_WOOD_STRIPPED.get(), 0);
 			addLog(ModBlocks.BOP_WOOD.get(), 1, ModBlocks.BOP_WOOD_STRIPPED.get(), 1);
@@ -153,6 +159,12 @@ public class StrippedLogRegistry {
 		if(ModBlocks.THAUMCRAFT_WOOD.isEnabled() && ModBlocks.THAUMCRAFT_WOOD_STRIPPED.isEnabled()) {
 			addLog(ModBlocks.THAUMCRAFT_WOOD.get(), 0, ModBlocks.THAUMCRAFT_WOOD_STRIPPED.get(), 0);
 			addLog(ModBlocks.THAUMCRAFT_WOOD.get(), 1, ModBlocks.THAUMCRAFT_WOOD_STRIPPED.get(), 1);
+		}
+
+		if(ModBlocks.WITCHERY_WOOD.isEnabled() && ModBlocks.WITCHERY_WOOD_STRIPPED.isEnabled()) {
+			addLog(ModBlocks.WITCHERY_WOOD.get(), 0, ModBlocks.WITCHERY_WOOD_STRIPPED.get(), 0);
+			addLog(ModBlocks.WITCHERY_WOOD.get(), 1, ModBlocks.WITCHERY_WOOD_STRIPPED.get(), 1);
+			addLog(ModBlocks.WITCHERY_WOOD.get(), 2, ModBlocks.WITCHERY_WOOD_STRIPPED.get(), 2);
 		}
 
 		if (ModBlocks.BARK.isEnabled() && ModBlocks.WOOD_STRIPPED.isEnabled()) {

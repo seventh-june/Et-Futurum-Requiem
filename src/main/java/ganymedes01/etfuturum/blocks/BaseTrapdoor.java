@@ -22,6 +22,9 @@ public class BaseTrapdoor extends BlockTrapDoor {
 		} else if(type.split("_")[0].equals("thaumcraft")) {
 			mod = "thaumcraft:";
 			type = type.substring(11, type.length());
+		} else if(type.split("_")[0].equals("witchery")) {
+			mod = "witchery:";
+			type = type.substring(9, type.length());
 		} else {
 			mod = "";
 		}

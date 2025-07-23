@@ -80,6 +80,9 @@ public enum ModBlocks {
 	THAUMCRAFT_LOG_STRIPPED(ConfigBlocksItems.enableStrippedLogs && ModsList.THAUMCRAFT.isLoaded(), new BlockStrippedThaumcraftLog("thaumcraft_stripped_log", false, true)),
 	THAUMCRAFT_WOOD(ConfigBlocksItems.enableStrippedLogs && ModsList.THAUMCRAFT.isLoaded(), new BlockStrippedThaumcraftLog("thaumcraft_wood", true, false)),
 	THAUMCRAFT_WOOD_STRIPPED(ConfigBlocksItems.enableStrippedLogs && ModsList.THAUMCRAFT.isLoaded(), new BlockStrippedThaumcraftLog("thaumcraft_stripped_wood", true, true)),
+	WITCHERY_LOG_STRIPPED(ConfigBlocksItems.enableStrippedLogs && ModsList.WITCHERY.isLoaded(), new BlockStrippedWitcheryLog("witchery_stripped_log", false, true)),
+	WITCHERY_WOOD(ConfigBlocksItems.enableStrippedLogs && ModsList.WITCHERY.isLoaded(), new BlockStrippedWitcheryLog("witchery_wood", true, false)),
+	WITCHERY_WOOD_STRIPPED(ConfigBlocksItems.enableStrippedLogs && ModsList.WITCHERY.isLoaded(), new BlockStrippedWitcheryLog("witchery_stripped_wood", true, true)),
 	CONCRETE(ConfigBlocksItems.enableConcrete, new BaseSubtypesBlock(Material.rock, "white_concrete", "orange_concrete", "magenta_concrete", "light_blue_concrete", "yellow_concrete", "lime_concrete", "pink_concrete",
 			"gray_concrete", "light_gray_concrete", "cyan_concrete", "purple_concrete", "blue_concrete", "brown_concrete", "green_concrete", "red_concrete", "black_concrete").setNames("concrete")
 			.setMapColorBaseBlock(Blocks.wool).setHardness(1.8F).setResistance(1.8F),
@@ -401,6 +404,9 @@ public enum ModBlocks {
 	//THAUMCRAFT WOOD FENCE
 	THAUMCRAFT_WOOD_FENCE(ConfigBlocksItems.enableVanillaFences && ModsList.THAUMCRAFT.isLoaded(), new BlockModernWoodFenceThaumcraft()),
 
+	//WITCHERY WOOD FENCE
+	WITCHERY_WOOD_FENCE(ConfigBlocksItems.enableVanillaFences && ModsList.WITCHERY.isLoaded(), new BlockModernWoodFenceWitchery()),
+
 	//legacy buttons
 	BUTTON_SPRUCE(ConfigBlocksItems.enableVanillaWoodRedstone, new BlockWoodButton("spruce", Blocks.planks, 1, true)),
 	BUTTON_BIRCH(ConfigBlocksItems.enableVanillaWoodRedstone, new BlockWoodButton("birch", Blocks.planks, 2, true)),
@@ -435,6 +441,11 @@ public enum ModBlocks {
 	//THAUMCRAFT WOOD BUTTONS
 	THAUMCRAFT_GREATWOOD_BUTTON(ConfigBlocksItems.enableVanillaWoodRedstone && ModsList.THAUMCRAFT.isLoaded(), new BlockWoodButton("thaumcraft_greatwood", GameRegistry.findBlock("Thaumcraft", "blockWoodenDevice"), 6, true)),
 	THAUMCRAFT_SILVERWOOD_BUTTON(ConfigBlocksItems.enableVanillaWoodRedstone && ModsList.THAUMCRAFT.isLoaded(), new BlockWoodButton("thaumcraft_silverwood", GameRegistry.findBlock("Thaumcraft", "blockWoodenDevice"), 7, true)),
+
+	//WITCHERY WOOD BUTTONS
+	WITCHERY_ROWAN_BUTTON(ConfigBlocksItems.enableVanillaWoodRedstone && ModsList.WITCHERY.isLoaded(), new BlockWoodButton("witchery_rowan", GameRegistry.findBlock("witchery", "witchwood"), 0, true)),
+	WITCHERY_ALDER_BUTTON(ConfigBlocksItems.enableVanillaWoodRedstone && ModsList.WITCHERY.isLoaded(), new BlockWoodButton("witchery_alder", GameRegistry.findBlock("witchery", "witchwood"), 1, true)),
+	WITCHERY_HAWTHORN_BUTTON(ConfigBlocksItems.enableVanillaWoodRedstone && ModsList.WITCHERY.isLoaded(), new BlockWoodButton("witchery_hawthorn", GameRegistry.findBlock("witchery", "witchwood"), 2, true)),
 
 	//legacy pressure plates
 	PRESSURE_PLATE_SPRUCE(ConfigBlocksItems.enableVanillaWoodRedstone, new BlockWoodPressurePlate("spruce", Blocks.planks, 1, true)),
@@ -471,6 +482,11 @@ public enum ModBlocks {
 	THAUMCRAFT_GREATWOOD_PRESSURE_PLATE(ConfigBlocksItems.enableVanillaWoodRedstone && ModsList.THAUMCRAFT.isLoaded(), new BlockWoodPressurePlate("thaumcraft_greatwood", GameRegistry.findBlock("Thaumcraft", "blockWoodenDevice"), 6, true)),
 	THAUMCRAFT_SILVERWOOD_PRESSURE_PLATE(ConfigBlocksItems.enableVanillaWoodRedstone && ModsList.THAUMCRAFT.isLoaded(), new BlockWoodPressurePlate("thaumcraft_silverwood", GameRegistry.findBlock("Thaumcraft", "blockWoodenDevice"), 7, true)),
 
+	//WITCHERY PRESSURE PLATE
+	WITCHERY_ROWAN_PRESSURE_PLATE(ConfigBlocksItems.enableVanillaWoodRedstone && ModsList.WITCHERY.isLoaded(), new BlockWoodPressurePlate("witchery_rowan", GameRegistry.findBlock("witchery", "witchwood"), 0, true)),
+	WITCHERY_ALDER_PRESSURE_PLATE(ConfigBlocksItems.enableVanillaWoodRedstone && ModsList.WITCHERY.isLoaded(), new BlockWoodPressurePlate("witchery_alder", GameRegistry.findBlock("witchery", "witchwood"), 1, true)),
+	WITCHERY_HAWTHORN_PRESSURE_PLATE(ConfigBlocksItems.enableVanillaWoodRedstone && ModsList.WITCHERY.isLoaded(), new BlockWoodPressurePlate("witchery_hawthorn", GameRegistry.findBlock("witchery", "witchwood"), 2, true)),
+
 	//legacy fence gates
 	FENCE_GATE_SPRUCE(ConfigBlocksItems.enableVanillaGates, new BlockWoodFenceGate("spruce", Blocks.planks, 1, true)),
 	FENCE_GATE_BIRCH(ConfigBlocksItems.enableVanillaGates, new BlockWoodFenceGate("birch", Blocks.planks, 2, true)),
@@ -505,6 +521,11 @@ public enum ModBlocks {
 	//THAUMCRAFT FENCE GATE
 	THAUMCRAFT_GREATWOOD_FENCE_GATE(ConfigBlocksItems.enableVanillaGates && ModsList.THAUMCRAFT.isLoaded(), new BlockWoodFenceGate("thaumcraft_greatwood", GameRegistry.findBlock("Thaumcraft", "blockWoodenDevice"), 6, true)),
 	THAUMCRAFT_SILVERWOOD_FENCE_GATE(ConfigBlocksItems.enableVanillaGates && ModsList.THAUMCRAFT.isLoaded(), new BlockWoodFenceGate("thaumcraft_silverwood", GameRegistry.findBlock("Thaumcraft", "blockWoodenDevice"), 7, true)),
+
+	//WITCHERY FENCE GATE
+	WITCHERY_ROWAN_FENCE_GATE(ConfigBlocksItems.enableVanillaGates && ModsList.WITCHERY.isLoaded(), new BlockWoodFenceGate("witchery_rowan", GameRegistry.findBlock("witchery", "witchwood"), 0, true)),
+	WITCHERY_ALDER_FENCE_GATE(ConfigBlocksItems.enableVanillaGates && ModsList.WITCHERY.isLoaded(), new BlockWoodFenceGate("witchery_alder", GameRegistry.findBlock("witchery", "witchwood"), 1, true)),
+	WITCHERY_HAWTHORN_FENCE_GATE(ConfigBlocksItems.enableVanillaGates && ModsList.WITCHERY.isLoaded(), new BlockWoodFenceGate("witchery_hawthorn", GameRegistry.findBlock("witchery", "witchwood"), 2, true)),
 
 	//legacy doors
 	DOOR_SPRUCE(ConfigBlocksItems.enableVanillaDoors, new BaseDoor("spruce")),
@@ -541,6 +562,11 @@ public enum ModBlocks {
 	THAUMCRAFT_GREATWOOD_DOOR(ConfigBlocksItems.enableVanillaDoors && ModsList.THAUMCRAFT.isLoaded(), new BaseDoor("thaumcraft_greatwood")),
 	THAUMCRAFT_SILVERWOOD_DOOR(ConfigBlocksItems.enableVanillaDoors && ModsList.THAUMCRAFT.isLoaded(), new BaseDoor("thaumcraft_silverwood")),
 
+	//WITCHERY DOORS
+	WITCHERY_ROWAN_DOOR(ConfigBlocksItems.enableVanillaDoors && ModsList.WITCHERY.isLoaded(), new BaseDoor("witchery_rowan")),
+	WITCHERY_ALDER_DOOR(ConfigBlocksItems.enableVanillaDoors && ModsList.WITCHERY.isLoaded(), new BaseDoor("witchery_alder")),
+	WITCHERY_HAWTHORN_DOOR(ConfigBlocksItems.enableVanillaDoors && ModsList.WITCHERY.isLoaded(), new BaseDoor("witchery_hawthorn")),
+
 	//legacy trapdoors
 	TRAPDOOR_SPRUCE(ConfigBlocksItems.enableVanillaTrapdoors, new BaseTrapdoor("spruce")),
 	TRAPDOOR_BIRCH(ConfigBlocksItems.enableVanillaTrapdoors, new BaseTrapdoor("birch")),
@@ -575,6 +601,11 @@ public enum ModBlocks {
 	//THAUMCRAFT TRAPDOORS
 	THAUMCRAFT_GREATWOOD_TRAPDOOR(ConfigBlocksItems.enableVanillaTrapdoors && ModsList.THAUMCRAFT.isLoaded(), new BaseTrapdoor("thaumcraft_greatwood")),
 	THAUMCRAFT_SILVERWOOD_TRAPDOOR(ConfigBlocksItems.enableVanillaTrapdoors && ModsList.THAUMCRAFT.isLoaded(), new BaseTrapdoor("thaumcraft_silverwood")),
+
+	//WITCHERY TRAPDOORS
+	WITCHERY_ROWAN_TRAPDOOR(ConfigBlocksItems.enableVanillaTrapdoors && ModsList.WITCHERY.isLoaded(), new BaseTrapdoor("witchery_rowan")),
+	WITCHERY_ALDER_TRAPDOOR(ConfigBlocksItems.enableVanillaTrapdoors && ModsList.WITCHERY.isLoaded(), new BaseTrapdoor("witchery_alder")),
+	WITCHERY_HAWTHORN_TRAPDOOR(ConfigBlocksItems.enableVanillaTrapdoors && ModsList.WITCHERY.isLoaded(), new BaseTrapdoor("witchery_hawthorn")),
 
 	//legacy signs
 	SIGN_SPRUCE(ConfigBlocksItems.enableVanillaSigns, new BlockWoodSign(TileEntityWoodSign.class, true, "spruce", Blocks.planks, 1), null),
@@ -637,7 +668,14 @@ public enum ModBlocks {
 	THAUMCRAFT_GREATWOOD_WALL_SIGN(ConfigBlocksItems.enableNewSigns && ModsList.THAUMCRAFT.isLoaded(), new BlockWoodSign(TileEntityWoodSign.class, false, "thaumcraft_greatwood", GameRegistry.findBlock("Thaumcraft", "blockWoodenDevice"), 6), null),
 	THAUMCRAFT_SILVERWOOD_SIGN(ConfigBlocksItems.enableNewSigns && ModsList.THAUMCRAFT.isLoaded(), new BlockWoodSign(TileEntityWoodSign.class, true, "thaumcraft_silverwood", GameRegistry.findBlock("Thaumcraft", "blockWoodenDevice"), 7), ItemBlockSign.class),
 	THAUMCRAFT_SILVERWOOD_WALL_SIGN(ConfigBlocksItems.enableNewSigns && ModsList.THAUMCRAFT.isLoaded(), new BlockWoodSign(TileEntityWoodSign.class, false, "thaumcraft_silverwood", GameRegistry.findBlock("Thaumcraft", "blockWoodenDevice"), 7), null),
-	
+
+	WITCHERY_ROWAN_SIGN(ConfigBlocksItems.enableNewSigns && ModsList.WITCHERY.isLoaded(), new BlockWoodSign(TileEntityWoodSign.class, true, "witchery_rowan", GameRegistry.findBlock("witchery", "witchwood"), 0), ItemBlockSign.class),
+	WITCHERY_ROWAN_WALL_SIGN(ConfigBlocksItems.enableNewSigns && ModsList.WITCHERY.isLoaded(), new BlockWoodSign(TileEntityWoodSign.class, false, "witchery_rowan", GameRegistry.findBlock("witchery", "witchwood"), 0), null),
+	WITCHERY_ALDER_SIGN(ConfigBlocksItems.enableNewSigns && ModsList.WITCHERY.isLoaded(), new BlockWoodSign(TileEntityWoodSign.class, true, "witchery_alder", GameRegistry.findBlock("witchery", "witchwood"), 1), ItemBlockSign.class),
+	WITCHERY_ALDER_WALL_SIGN(ConfigBlocksItems.enableNewSigns && ModsList.WITCHERY.isLoaded(), new BlockWoodSign(TileEntityWoodSign.class, false, "witchery_alder", GameRegistry.findBlock("witchery", "witchwood"), 1), null),
+	WITCHERY_HAWTHORN_SIGN(ConfigBlocksItems.enableNewSigns && ModsList.WITCHERY.isLoaded(), new BlockWoodSign(TileEntityWoodSign.class, true, "witchery_hawthorn", GameRegistry.findBlock("witchery", "witchwood"), 2), ItemBlockSign.class),
+	WITCHERY_HAWTHORN_WALL_SIGN(ConfigBlocksItems.enableNewSigns && ModsList.WITCHERY.isLoaded(), new BlockWoodSign(TileEntityWoodSign.class, false, "witchery_hawthorn", GameRegistry.findBlock("witchery", "witchwood"), 2), null),
+
 	//BED
 
 	WHITE_BED(ConfigBlocksItems.enableDyedBeds, new BlockDyedBed(0), ItemBlockDyedBed.class),

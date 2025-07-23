@@ -119,6 +119,13 @@ public enum ModItems {
 	THAUMCRAFT_SILVERWOOD_BOAT(ConfigBlocksItems.enableNewBoats && ModsList.THAUMCRAFT.isLoaded(), new ItemNewBoat("thaumcraft", "silverwood", () -> GameRegistry.findItem("Thaumcraft", "blockWoodenDevice"), 7, false, false)),
 	THAUMCRAFT_SILVERWOOD_CHEST_BOAT(ConfigBlocksItems.enableNewBoats && ModsList.THAUMCRAFT.isLoaded(), new ItemNewBoat("thaumcraft", "silverwood", () -> GameRegistry.findItem("Thaumcraft", "blockWoodenDevice"), 7, true, false)),
 
+	WITCHERY_ROWAN_BOAT(ConfigBlocksItems.enableNewBoats && ModsList.WITCHERY.isLoaded(), new ItemNewBoat("witchery", "rowan", () -> GameRegistry.findItem("witchery", "witchwood"), 0, false, false)),
+	WITCHERY_ROWAN_CHEST_BOAT(ConfigBlocksItems.enableNewBoats && ModsList.WITCHERY.isLoaded(), new ItemNewBoat("witchery", "rowan", () -> GameRegistry.findItem("witchery", "witchwood"), 0, true, false)),
+	WITCHERY_ALDER_BOAT(ConfigBlocksItems.enableNewBoats && ModsList.WITCHERY.isLoaded(), new ItemNewBoat("witchery", "alder", () -> GameRegistry.findItem("witchery", "witchwood"), 1, false, false)),
+	WITCHERY_ALDER_CHEST_BOAT(ConfigBlocksItems.enableNewBoats && ModsList.WITCHERY.isLoaded(), new ItemNewBoat("witchery", "alder", () -> GameRegistry.findItem("witchery", "witchwood"), 1, true, false)),
+	WITCHERY_HAWTHORN_BOAT(ConfigBlocksItems.enableNewBoats && ModsList.WITCHERY.isLoaded(), new ItemNewBoat("witchery", "hawthorn", () -> GameRegistry.findItem("witchery", "witchwood"), 2, false, false)),
+	WITCHERY_HAWTHORN_CHEST_BOAT(ConfigBlocksItems.enableNewBoats && ModsList.WITCHERY.isLoaded(), new ItemNewBoat("witchery", "hawthorn", () -> GameRegistry.findItem("witchery", "witchwood"), 2, true, false)),
+
 	//legacy sign items -- new signs use their ItemBlock as the sign item instead
 	ITEM_SIGN_SPRUCE(ConfigBlocksItems.enableVanillaSigns, new ItemWoodSign((BlockWoodSign) ModBlocks.SIGN_SPRUCE.get())),
 	ITEM_SIGN_BIRCH(ConfigBlocksItems.enableVanillaSigns, new ItemWoodSign((BlockWoodSign) ModBlocks.SIGN_BIRCH.get())),

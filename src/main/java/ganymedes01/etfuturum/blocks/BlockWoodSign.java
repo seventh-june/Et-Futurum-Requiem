@@ -40,6 +40,9 @@ public class BlockWoodSign extends BlockSign {
 		} else if(type.split("_")[0].equals("thaumcraft")) {
 			mod = "thaumcraft:";
 			item = type.substring(11, type.length());
+		} else if(type.split("_")[0].equals("witchery")) {
+			mod = "witchery:";
+			item = type.substring(9, type.length());
 		} else {
 			mod = "";
 			item = type;

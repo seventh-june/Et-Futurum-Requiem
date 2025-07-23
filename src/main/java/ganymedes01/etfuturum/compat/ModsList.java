@@ -41,6 +41,7 @@ public enum ModsList {
 	DRAGON_QUEST("DQMIIINext"),
 	LOTR("lotr"),
 	MATERIALIS("materialis"),
+	WITCHERY("witchery"),
 
 	NOTFINE("notfine"),
 	NOT_ENOUGH_IDS("neid"),
